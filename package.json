@@ -7,8 +7,8 @@
         "devWeb": "   cross-env NODE_ENV=development webpack serve   --config build/webpack.config.web.ts",
         "buildCron": "cross-env NODE_ENV=production  webpack         --config build/webpack.config.cron.ts",
         "buildWeb": " cross-env NODE_ENV=production  webpack         --config build/webpack.config.web.ts",
-        "dev": "  concurrently 'npm run devCron'   'npm run devWeb'",
-        "build": "concurrently 'npm run buildCron' 'npm run buildWeb'",
+        "dev": "  concurrently 'yarn devCron'   'yarn devWeb'",
+        "build": "concurrently 'yarn buildCron' 'yarn buildWeb'",
         "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore ."
     },
     "babel": {
