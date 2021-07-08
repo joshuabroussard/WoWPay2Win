@@ -41,6 +41,11 @@ async function main() {
     child.finish()
 
     for (const region of regions) {
+        console.log("WE ARE FOR LOOPING:" + region);
+        console.log(region.config.slug);
+        if(region.config.slug != 'us') {
+            return console.log('NOT US, RETURNING!')
+        }
         const child = transaction.startChild({ op: 'fetchAuctions', description: region.config.slug })
         await region.fetchAuctions()
         child.finish()
