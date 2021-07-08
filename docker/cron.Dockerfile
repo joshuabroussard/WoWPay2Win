@@ -36,5 +36,5 @@ RUN mkdir -p                    ./dist/web/data
 # Copy app
 COPY --from=builder /app/dist/  ./dist/
 
-RUN echo "30 * * * * cd /app && yarn fetchAuctions" >> /etc/crontabs/root
+RUN echo "5 * * * * cd /app && yarn fetchAuctions" >> /etc/crontabs/root
 CMD crond -f
